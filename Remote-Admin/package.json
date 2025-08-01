@@ -1,18 +1,35 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "remote-admin-panel",
+  "description": "Professional React-based admin dashboard for Android device monitoring with Firebase integration",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "author": "Remote Admin System",
+  "license": "MIT",
+  "keywords": ["admin-dashboard", "device-monitoring", "firebase", "react", "typescript"],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "preview": "vite preview --host 0.0.0.0",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules/.vite"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
+    "@tanstack/react-query": "^5.17.15",
+    "clsx": "^2.1.0",
+    "date-fns": "^3.2.0",
+    "firebase": "^10.7.2",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.49.3",
+    "react-router-dom": "^6.21.1",
+    "recharts": "^2.10.3",
+    "tailwind-merge": "^2.2.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",

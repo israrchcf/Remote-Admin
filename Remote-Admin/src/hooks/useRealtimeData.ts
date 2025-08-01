@@ -1,63 +1,15 @@
 import { useEffect, useState } from 'react';
 import { ref, onValue, off, DataSnapshot } from 'firebase/database';
-import { collection, onSnapshot, query, orderBy, limit, Unsubscribe } from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy, limit, where, Unsubscribe } from 'firebase/firestore';
 import { db, firestore } from '../lib/firebase';
-
-// Device data interface
-export interface Device {
-  deviceId: string;
-  userId: string;
-  status: 'online' | 'offline' | 'away';
-  lastSeen: number;
-  appVersion: string;
-  fcmToken?: string;
-  deviceModel?: string;
-  androidVersion?: string;
-}
-
-// Location data interface
-export interface LocationData {
-  deviceId: string;
-  latitude: number;
-  longitude: number;
-  accuracy: number;
-  timestamp: number;
-  altitude?: number;
-  speed?: number;
-  provider?: string;
-}
-
-// SMS data interface
-export interface SmsData {
-  deviceId: string;
-  type: 'received' | 'sent';
-  address: string;
-  body: string;
-  timestamp: number;
-  contactName?: string;
-  isRead: boolean;
-}
-
-// Call data interface
-export interface CallData {
-  deviceId: string;
-  phoneNumber: string;
-  type: string;
-  duration: number;
-  timestamp: number;
-  contactName?: string;
-  callDirection: 'inbound' | 'outbound';
-}
-
-// App usage data interface
-export interface AppUsageData {
-  deviceId: string;
-  packageName: string;
-  appName: string;
-  totalTimeInForeground: number;
-  timestamp: number;
-  usageType: 'statistics' | 'event';
-}
+import type { 
+  Device, 
+  LocationData, 
+  SmsData, 
+  CallData, 
+  AppUsageData, 
+  FirebaseHookResult 
+} from '../types';
 
 // Custom hook for real-time devices
 export function useRealtimeDevices() {
